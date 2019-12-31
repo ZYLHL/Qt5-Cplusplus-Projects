@@ -1,2 +1,1 @@
-#src category
-#源 目录
+# src category/源 目录
