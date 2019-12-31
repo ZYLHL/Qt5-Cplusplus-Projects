@@ -6,5 +6,5 @@
 
 <center>以LCD形式显示系统当前时间.</center>
 
-![运行时截图](\Scrennshots.png)
+![运行时截图](Scrennshots.png)
 
