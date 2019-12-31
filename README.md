@@ -1,4 +1,4 @@
-# Qt5-C--Projects
+# Qt5-C++-Projects
 These are all my GUI projects during the study of Qt5.
 ## Instruction/说明
  - "/src"folder is the code of every projects.
