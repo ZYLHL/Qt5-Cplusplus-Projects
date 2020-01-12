@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">幻想市公共交通乘坐路线查询程序</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../res/res.qrc">
+    <normaloff>:/img/img/busicon.png</normaloff>:/img/img/busicon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_start">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_arrow">
+        <property name="text">
+         <string notr="true">-&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_end">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>End</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="ZoomArea" name="zoomArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>758</width>
+         <height>530</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>736</width>
+            <height>508</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="pushButton_p12">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>30</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">12</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p13">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>270</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">13</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p00">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>450</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">0</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p01">
+           <property name="geometry">
+            <rect>
+             <x>360</x>
+             <y>630</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">1</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p02">
+           <property name="geometry">
+            <rect>
+             <x>590</x>
+             <y>550</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">2</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p15">
+           <property name="geometry">
+            <rect>
+             <x>520</x>
+             <y>260</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">15</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p14">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>150</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">14</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p11">
+           <property name="geometry">
+            <rect>
+             <x>400</x>
+             <y>30</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">11</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p10">
+           <property name="geometry">
+            <rect>
+             <x>620</x>
+             <y>30</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">10</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p09">
+           <property name="geometry">
+            <rect>
+             <x>800</x>
+             <y>30</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">9</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p05">
+           <property name="geometry">
+            <rect>
+             <x>910</x>
+             <y>190</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">5</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p07">
+           <property name="geometry">
+            <rect>
+             <x>850</x>
+             <y>430</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">7</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p04">
+           <property name="geometry">
+            <rect>
+             <x>720</x>
+             <y>190</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">4</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p06">
+           <property name="geometry">
+            <rect>
+             <x>720</x>
+             <y>550</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">6</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p08">
+           <property name="geometry">
+            <rect>
+             <x>910</x>
+             <y>310</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">8</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p03">
+           <property name="geometry">
+            <rect>
+             <x>640</x>
+             <y>310</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">3</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_p16">
+           <property name="geometry">
+            <rect>
+             <x>850</x>
+             <y>630</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string notr="true">16</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_img">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1481</width>
+             <height>735</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../res/res.qrc">:/img/route</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <zorder>label_img</zorder>
+          <zorder>pushButton_p03</zorder>
+          <zorder>pushButton_p10</zorder>
+          <zorder>pushButton_p05</zorder>
+          <zorder>pushButton_p08</zorder>
+          <zorder>pushButton_p11</zorder>
+          <zorder>pushButton_p13</zorder>
+          <zorder>pushButton_p06</zorder>
+          <zorder>pushButton_p02</zorder>
+          <zorder>pushButton_p07</zorder>
+          <zorder>pushButton_p09</zorder>
+          <zorder>pushButton_p16</zorder>
+          <zorder>pushButton_p04</zorder>
+          <zorder>pushButton_p12</zorder>
+          <zorder>pushButton_p01</zorder>
+          <zorder>pushButton_p15</zorder>
+          <zorder>pushButton_p00</zorder>
+          <zorder>pushButton_p14</zorder>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QRadioButton" name="radioButton_dijkstra">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string notr="true">Dijkstra</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_floyd">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string notr="true">Floyd</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_calculate">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Calculate</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>More</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_path">
+       <property name="text">
+        <string>Path:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser_path"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_bus1">
+       <property name="text">
+        <string>Bus 1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_bus2">
+       <property name="text">
+        <string>Bus 2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_bus3">
+       <property name="text">
+        <string>Bus 3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="../../res/res.qrc">
+     <normaloff>:/img/img/about.png</normaloff>:/img/img/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="icon">
+    <iconset resource="../../res/res.qrc">
+     <normaloff>:/img/img/qt-about.png</normaloff>:/img/img/qt-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ZoomArea</class>
+   <extends>QScrollArea</extends>
+   <header>ui/zoomarea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
