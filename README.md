@@ -7,5 +7,5 @@ These are all my GUI projects during the study of Qt5.
  - "/projects"文件夹是每个项目的可执行文件（包括使用说明）。
 
 ## Others/其他
- - [my blog website](https://blog.dlstudio.top)
- - [我的博客网址](https://blog.dlstudio.top)
+ - [my blog website](https://dlstudio.top)
+ - [我的博客网址](https://dlstudio.top)
